@@ -54,6 +54,37 @@ h4 {
   font-size: 14px;
 }
 
+blockquote {
+  font-size: 35px;
+  font-style: italic;
+  letter-spacing: 3px;
+  height: 200px;
+  padding: 80px 30px 30px 0px;
+  -webkit-text-stroke: 4px;
+}
+
+address {
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+}
+
+footer {
+  border-top: solid white 0.3px;
+
+  .footer-sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .footer-column {
+    padding-right: 100px;
+  }
+}
+
 .nav-link {
   color: white;
   font-size: 13px;
@@ -66,7 +97,7 @@ h4 {
 }
 
 .navbar-toggler-icon {
-  background-image: url(/img/Nav_Collapsed_Icon-01.png);
+  background-image: url(../assets/Nav_Collapsed_Icon-01.png);
   width: 50px;
 }
 
@@ -122,6 +153,27 @@ h4 {
     font-size: 16px;
   }
 }
+
+.my-projects-wrapper {
+  align-items: center;
+  background-color: white;
+  color: black;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.dev-skills-wrapper {
+  align-items: center;
+  background-color: white;
+  color: black;
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
 /*Scrolling Animation CSS Start */
 
 .scrolling-animation-container {
