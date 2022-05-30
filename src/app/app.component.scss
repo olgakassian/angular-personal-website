@@ -1,0 +1,223 @@
+@media (max-width: 560px) {
+  .container-fluid {
+    flex-direction: row-reverse;
+  }
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h2 {
+    font-size: 30px !important;
+  }
+}
+
+body {
+  background-color: #171717;
+  color: white;
+  font-family: "Maax Regular";
+  margin: 0;
+  overflow: auto;
+}
+
+nav.navbar {
+  position: relative;
+  padding: 0;
+  height: 10vh;
+}
+
+header {
+  min-height: 90vh;
+
+  h1 {
+    font-weight: bold;
+    font-size: 80px;
+    letter-spacing: 6px;
+    -webkit-text-stroke: 4px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  h3 {
+    font-weight: 800;
+    margin-top: 40px;
+    max-width: 500px;
+  }
+}
+
+h4 {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.navbar-toggler-icon {
+  background-image: url(/img/Nav_Collapsed_Icon-01.png);
+  width: 50px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.my-story-wrapper,
+.interests-wrapper {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.my-story-text {
+  font-size: 2.2rem;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.my-story-gif {
+  -webkit-text-stroke: 2px;
+}
+
+row.interests-content {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+/*Scrolling Animation CSS Start */
+
+.scrolling-animation-container {
+  overflow: hidden;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.scrolling-animation-container::before {
+  left: 0;
+}
+
+.scrolling-animation-container:after {
+  position: absolute;
+  right: 0;
+}
+
+.scrolling-animation-container:after,
+.scrolling-animation-container:before {
+  position: absolute;
+  top: 0;
+  color: #16a085;
+  line-height: 40px;
+  animation-name: opacity;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.content-animation-list {
+  margin-top: 0;
+  padding-left: 110px;
+  text-align: left;
+  list-style: none;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  animation-name: change;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.content-animation-list-item {
+  line-height: 50px;
+  margin: 0;
+}
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes change {
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -50%, 0);
+  }
+
+  83.3%,
+  95.96% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*Scrolling Animation CSS End */
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
