@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "personal-website": {
+    "angular-personal-website": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,19 +20,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/personal-website",
+            "outputPath": "dist/angular-personal-website",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -72,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "personal-website:build:production"
+              "browserTarget": "angular-personal-website:build:production"
             },
             "development": {
-              "browserTarget": "personal-website:build:development"
+              "browserTarget": "angular-personal-website:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "personal-website:build"
+            "browserTarget": "angular-personal-website:build"
           }
         },
         "test": {
@@ -94,18 +89,13 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
       }
     }
   },
-  "defaultProject": "personal-website"
+  "defaultProject": "angular-personal-website"
 }
