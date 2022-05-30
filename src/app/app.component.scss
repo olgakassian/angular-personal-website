@@ -92,11 +92,36 @@ h4 {
   -webkit-text-stroke: 2px;
 }
 
-row.interests-content {
-  margin-right: 15px;
-  margin-left: 15px;
-}
+.interests-wrapper {
+  margin-top: 90px;
+  margin-bottom: 90px;
 
+  .interests-content {
+    display: flex;
+    margin: 40px 0px 40px 90px;
+  }
+
+  .interest-individual-section {
+    padding: 0px 60px 0px 60px;
+  }
+
+  .interests-upper-definition {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .interestes-main-topic {
+    font-weight: bolder;
+    font-size: 22px;
+    padding: 5px 10px 10px 0px;
+  }
+
+  .interests-description {
+    font-weight: 100;
+    font-size: 16px;
+  }
+}
 /*Scrolling Animation CSS Start */
 
 .scrolling-animation-container {
