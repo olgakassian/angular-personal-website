@@ -78,10 +78,25 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    padding-top: 40px;
   }
 
-  .footer-column {
-    padding-right: 100px;
+  .footer-section-title {
+    -webkit-text-stroke: 0.5px;
+    padding-bottom: 10px;
+  }
+
+  .footer-content {
+    font-size: 13px;
+  }
+
+  .space {
+    height: 200px;
+  }
+
+  .open-souce-code {
+    font-size: 9px;
+    padding: 0;
   }
 }
 
