@@ -1,15 +1,65 @@
-@media (max-width: 560px) {
+@media (max-width: 990px) {
   .container-fluid {
     flex-direction: row-reverse;
   }
-  .navbar-brand {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+
+  .header {
+    flex-direction: column-reverse;
+
+    h1 {
+      font-size: 40px;
+      padding-top: 25px;
+      -webkit-text-stroke: 4px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    .scrolling-animation-container {
+      overflow: hidden;
+      height: 35px;
+      margin-top: 5px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-top: 15px;
+    }
   }
-  h2 {
-    font-size: 30px !important;
+
+  section.my-story-wrapper {
+    text-align: left;
+    margin-top: 0;
+    p.my-story-text {
+      font-size: 1.2rem;
+      padding-top: 20px;
+      text-align: justify;
+    }
+  }
+
+  .interests-wrapper {
+    margin-top: 0px;
+
+    .row.interests-content {
+      margin: 10px 0px 40px 0px;
+    }
+
+    .col-12.interest-individual-section {
+      padding: 30px 0px 0px 10px;
+    }
+
+    .row.interests-upper-definition {
+      display: none;
+    }
+
+    .row.interestes-main-topic {
+      font-size: 20px;
+    }
+
+    .row.interests-description {
+      font-size: 16px;
+    }
   }
 }
 
@@ -31,7 +81,6 @@ header {
   min-height: 90vh;
 
   h1 {
-    font-weight: bold;
     font-size: 80px;
     letter-spacing: 6px;
     -webkit-text-stroke: 4px;
@@ -55,31 +104,57 @@ h4 {
 }
 
 blockquote {
+  display: block;
   font-size: 35px;
   font-style: italic;
   letter-spacing: 3px;
-  height: 200px;
   padding: 80px 30px 30px 0px;
   -webkit-text-stroke: 4px;
 }
 
 address {
-  align-items: center;
-  color: white;
-  display: block;
-  height: 500px;
-
   form {
-    padding-top: 50px;
+    padding-top: 70px;
   }
 
   .form-intro-text {
-    font-size: 30px;
+    font-size: 16px;
+    font-weight: 100;
+  }
+
+  .say-hello {
+    display: block;
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
+  .name-input,
+  .email-input,
+  .message-input {
+    border: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 5px 150px 5px 10px;
+    border-radius: 10px;
+  }
+
+  .message-input {
+    padding: 5px 150px 50px 10px;
+  }
+
+  .send-btn {
+    align-items: flex-end;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bolder;
+    margin-top: 10px;
+    padding: 5px 20px 5px 20px;
   }
 
   .bitmoji-coffee {
-    display: block;
-    width: 450px;
+    padding: 0px 30px 0px 0px;
+    width: 300px;
   }
 }
 
@@ -140,16 +215,17 @@ footer {
   margin-bottom: 70px;
 }
 
-.my-story-text {
-  font-size: 2.2rem;
-  font-weight: lighter;
-  text-align: left;
-}
+.my-story-wrapper {
+  .my-story-text {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    text-align: left;
+  }
 
-.my-story-gif {
-  -webkit-text-stroke: 2px;
+  .my-story-gif {
+    -webkit-text-stroke: 2px;
+  }
 }
-
 .interests-wrapper {
   margin-top: 90px;
   margin-bottom: 90px;

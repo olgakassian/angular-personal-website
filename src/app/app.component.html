@@ -32,7 +32,7 @@
 </nav>
 
 <header class="container-lg box">
-  <div class="row">
+  <div class="row header">
     <div class="col-12 col-md-6 box">
       <h1>
         OLGA <br />
@@ -93,7 +93,7 @@
   <section class="interests-wrapper">
     <h4>INTERESTS</h4>
     <div class="row interests-content">
-      <div class="col interest-individual-section">
+      <div class="col-12 col-md-4 interest-individual-section">
         <div class="row interests-upper-definition">
           Sustainability and ethics are<br />
           the only constants.
@@ -103,7 +103,7 @@
           I love thinking business and developing new ideas from scratch.
         </div>
       </div>
-      <div class="col interest-individual-section">
+      <div class="col-12 col-md-4 interest-individual-section">
         <div class="row interests-upper-definition">
           The way of bringing ideas to life <br />in the browser.
         </div>
@@ -112,7 +112,7 @@
           A passion discovered by mistake that's now a constant in my life.
         </div>
       </div>
-      <div class="col interest-individual-section">
+      <div class="col-12 col-md-4 interest-individual-section">
         <div class="row interests-upper-definition">
           The science and art of creating<br />
           emotional connections.
@@ -135,12 +135,12 @@
 
   <address>
     <div class="row">
-      <div class="col">
+      <div class="col-12 col-md-8">
         <form action="" method="get" class="contact-form">
           <div class="form-intro-text">
             Interested in discussing an idea, working together or chatting to
-            see if we're a match? <br />
-            SAY HELLO!
+            see if we're a match?
+            <span class="say-hello">SAY HELLO!</span>
           </div>
           <label for="name"></label>
           <input
@@ -148,6 +148,7 @@
             name="name"
             id="name"
             placeholder="Your Name"
+            class="name-input"
             required
           /><br />
           <label for="email"></label>
@@ -156,6 +157,7 @@
             name="email"
             id="email"
             placeholder="Your Email"
+            class="email-input"
             required
           /><br />
           <label for="message"></label>
@@ -164,13 +166,14 @@
             name="message"
             id="message"
             placeholder="Your Message"
+            class="message-input"
             required
           />
           <br />
-          <input type="submit" value="Subscribe!" />
+          <button type="submit" value="SEND" class="send-btn">SEND</button>
         </form>
       </div>
-      <div class="col">
+      <div class="col-12 col-md-4">
         <img
           src="../assets/OlgaKassian_Bitmoji_Coffee.png"
           alt="OlgaKassian Bitmoji Drinking Coffee"
@@ -183,12 +186,12 @@
 
 <footer class="container">
   <div class="row footer-sections">
-    <div class="col-3 footer-column">
+    <div class="col-6 col-md-3 footer-column">
       <div class="row footer-section-title">CONTACTS</div>
       <div class="row footer-content">+351 93 215 5400</div>
       <div class="row footer-content">olgakassian@gmail.com</div>
     </div>
-    <div class="col-3 footer-column">
+    <div class="col-6 col-md-3 footer-column">
       <div class="row footer-section-title">PROJECTS</div>
       <div class="row footer-content">Wonther</div>
       <div class="row footer-content">NFT Collection</div>
