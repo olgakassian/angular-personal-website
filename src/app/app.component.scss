@@ -1,4 +1,4 @@
-@media (max-width: 990px) {
+@media (max-width: 768px) {
   .container-fluid {
     flex-direction: row-reverse;
   }
@@ -118,6 +118,36 @@ header {
     margin-top: 40px;
     max-width: 500px;
   }
+
+  .portrait {
+    display: flex;
+    justify-content: right;
+    padding-right: 48px;
+  }
+  figure {
+    display: flex;
+    margin-right: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: end;
+  }
+  img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  img:hover {
+    filter: none;
+  }
+
+  figcaption {
+    display: flex;
+    font-size: 10px;
+    justify-content: right;
+    padding-top: 10px;
+  }
 }
 
 h4 {
@@ -125,16 +155,25 @@ h4 {
   font-size: 14px;
 }
 
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  transform: translatex(-50%, -50%);
+  z-index: -1;
+  overflow-x: hidden;
+}
+
 blockquote {
-  background-color: #f4f4f4;
-  color: #252422;
+  position: relative;
+  color: #f4f4f4;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 45px;
   font-style: italic;
-  height: 80vh;
-  margin-top: 20px;
+  height: 100vh;
   letter-spacing: 2px;
   -webkit-text-stroke: 4px;
 }
@@ -193,7 +232,7 @@ address {
 
 footer {
   border-top: solid white 0.3px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 
   .footer-sections {
     display: flex;
@@ -204,11 +243,18 @@ footer {
 
   .footer-section-title {
     -webkit-text-stroke: 0.5px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    padding-top: 20px;
   }
 
   .footer-content {
     font-size: 13px;
+
+    a {
+      text-decoration: none;
+      color: #f4f4f4;
+      padding-left: 0;
+    }
   }
 
   .space {
@@ -308,23 +354,24 @@ footer {
 }
 
 .my-projects-wrapper {
-  align-items: center;
-  background-color: white;
-  color: black;
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-.dev-skills-wrapper {
-  align-items: center;
-  background-color: white;
-  color: black;
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  margin-top: 60px;
+  margin-bottom: 100px;
+  position: relative;
+  .wonther-about {
+    padding-top: 30px;
+    .wonther-title {
+      font-size: 20px;
+      padding: 0px 0px 5px 0px;
+      -webkit-text-stroke: 1px;
+    }
+    .wonther-description {
+      font-size: 12px;
+      font-weight: 100;
+      text-align: justify;
+    }
+    #wonther-video {
+      max-width: 100%;
+    }
+  }
 }
 
 /*Scrolling Animation CSS Start */
