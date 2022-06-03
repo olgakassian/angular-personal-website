@@ -166,7 +166,12 @@
     <div class="quote">
       "TIME GOES BY NO MATTER WHAT. <br />MAKE THE MOST OUT OF IT."
     </div>
-    <video id="background-video" autoplay loop muted>
+    <video
+      id="background-video"
+      loop
+      oncanplay="this.play()"
+      onloadedmetadata="this.muted = true"
+    >
       <source
         src="https://cdn.shopify.com/s/files/1/0047/1616/7214/files/Blockquote_Techno_Background_Trim_1_1.mp4?v=1654180677"
         type="video/mp4"
