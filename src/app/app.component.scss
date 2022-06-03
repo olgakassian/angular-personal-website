@@ -184,34 +184,26 @@ blockquote {
 
 address {
   border-top: solid white 0.3px;
-  padding-top: 50px;
+  padding: 30px 0px 30px 0px;
   form {
     padding: 0px 0px 50px 0px;
   }
 
   .form-intro-text {
-    display: flex;
+    margin-top: 25px;
     font-size: 30px;
-    -webkit-text-stroke: 1px;
-    align-items: center;
-  }
-
-  .say-hello {
-    display: block;
-    font-size: 50px;
-    padding-bottom: 20px;
-    -webkit-text-stroke: 3px;
+    font-weight: 500;
+    line-height: 30px;
   }
 
   .name-input,
   .email-input,
   .message-input {
-    border: 0;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 12px;
     padding: 5px 150px 5px 10px;
-    border-radius: 10px;
+    border-radius: 50px;
   }
 
   .message-input {
@@ -220,7 +212,7 @@ address {
 
   .send-btn {
     align-items: flex-end;
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 12px;
     font-weight: bolder;
     margin-top: 10px;
@@ -381,7 +373,34 @@ footer {
 
 .dev-skills-wrapper {
   margin-top: 100px;
+  margin-bottom: 50px;
   position: relative;
+
+  .dev-skills-intro {
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  ul.list-services {
+    font-size: 15px;
+    font-weight: 100;
+    padding: 0;
+    margin: 25px 0px 0px 0px;
+    line-height: 20px;
+
+    li {
+      text-decoration: none;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .dev-skills-list,
+  .dev-tools-list {
+    margin-top: 25px;
+  }
 }
 
 /*Scrolling Animation CSS Start */
