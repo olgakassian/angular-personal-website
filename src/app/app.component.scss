@@ -4,8 +4,6 @@
   }
 
   .header {
-    flex-direction: column-reverse;
-
     h1 {
       font-size: 40px;
       padding-top: 25px;
@@ -29,6 +27,12 @@
   }
 
   footer {
+    div.form-intro-text {
+      font-size: 12px !important;
+    }
+    div.say-hello {
+      font-size: 18px;
+    }
     .row.footer-final-section {
       display: flex;
       flex-direction: column-reverse;
@@ -75,22 +79,21 @@
     }
   }
 
-  blockquote {
-    font-size: 25px !important;
-    height: 60vh !important;
-    padding-left: 10px;
+  .quote {
+    font-size: 20px !important;
     letter-spacing: 0 !important;
+    padding-left: 10px;
     -webkit-text-stroke: 2.5px !important;
   }
 }
 
 body {
   background-color: #252422;
-
   color: #f4f4f4;
   font-family: "Maax Regular";
   margin: 0;
   overflow: auto;
+  padding: 0;
 }
 
 nav.navbar {
@@ -155,38 +158,42 @@ h4 {
   font-size: 14px;
 }
 
-#background-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  transform: translatex(-50%, -50%);
-  z-index: -1;
-  overflow-x: hidden;
-}
-
 blockquote {
-  position: relative;
-  color: #f4f4f4;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 45px;
-  font-style: italic;
-  height: 100vh;
-  letter-spacing: 2px;
-  -webkit-text-stroke: 4px;
+  #background-video {
+    position: relative;
+    width: 100%;
+    // left: 50%;
+    // width: 100vw;
+    // margin-top: 20px;
+    // margin-left: -50vw;
+    z-index: -1;
+  }
+
+  .quote {
+    position: absolute;
+    color: #f4f4f4;
+    font-size: 45px;
+    font-style: italic;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 4px;
+  }
 }
 
 address {
+  border-top: solid white 0.3px;
+  padding-top: 50px;
   form {
-    padding: 70px 0px 50px 0px;
+    padding: 0px 0px 50px 0px;
   }
 
   .form-intro-text {
-    font-size: 15px;
-    max-width: 500px;
+    display: flex;
+    font-size: 30px;
     -webkit-text-stroke: 1px;
+    align-items: center;
   }
 
   .say-hello {
@@ -223,16 +230,11 @@ address {
   .send-btn:hover {
     color: #16a085;
   }
-
-  .bitmoji-coffee {
-    padding: 0px 30px 0px 0px;
-    width: 300px;
-  }
 }
 
 footer {
   border-top: solid white 0.3px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 
   .footer-sections {
     display: flex;
@@ -343,13 +345,14 @@ footer {
 
   .interestes-main-topic {
     font-weight: bolder;
-    font-size: 22px;
-    padding: 5px 10px 10px 0px;
+    font-size: 25px;
+    padding: 20px 10px 0px 0px;
   }
 
   .interests-description {
+    font-size: 15px;
     font-weight: 100;
-    font-size: 16px;
+    text-align: left;
   }
 }
 
@@ -372,6 +375,11 @@ footer {
       max-width: 100%;
     }
   }
+}
+
+.dev-skills-wrapper {
+  margin-top: 100px;
+  position: relative;
 }
 
 /*Scrolling Animation CSS Start */

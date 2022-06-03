@@ -61,8 +61,8 @@
   </div>
 </header>
 
-<main class="container">
-  <section class="my-story-wrapper">
+<main>
+  <section class="my-story-wrapper container-lg">
     <div class="row">
       <div class="col-12 col-md-4">
         <h4>MY STORY</h4>
@@ -86,7 +86,7 @@
     </div>
   </section>
 
-  <section class="interests-wrapper">
+  <section class="interests-wrapper container-lg">
     <h4>INTERESTS</h4>
     <div class="row interests-content">
       <div class="col-12 col-md-4 interest-individual-section">
@@ -121,7 +121,7 @@
     </div>
   </section>
 
-  <section class="my-projects-wrapper" id="my-projects">
+  <section class="my-projects-wrapper container-lg" id="my-projects">
     <h4>MY PROJECTS</h4>
     <div class="row">
       <div class="col-12 col-md-6">
@@ -163,29 +163,52 @@
   </section>
 
   <blockquote>
+    <div class="quote">
+      "TIME GOES BY NO MATTER WHAT. <br />MAKE THE MOST OUT OF IT."
+    </div>
     <video id="background-video" autoplay loop muted>
       <source
         src="https://cdn.shopify.com/s/files/1/0047/1616/7214/files/Blockquote_Techno_Background_Trim_1_1.mp4?v=1654180677"
         type="video/mp4"
       />
     </video>
-    "TIME GOES BY NO MATTER WHAT. <br />MAKE THE MOST OUT OF IT."
   </blockquote>
 
-  <section class="dev-skills-wrapper" id="dev-skills">
+  <section class="dev-skills-wrapper container-lg" id="dev-skills">
     <h4>DEVELOPER SKILLS</h4>
-    <div class="row"></div>
+    <div class="row">
+      <div class="col-3">
+        DEV SKILLS
+        <ul>
+          <li>HTML</li>
+          <li>CSS/SCSS</li>
+          <li>JAVASCRIPT/TYPESCRIPT</li>
+          <li>ANGULAR</li>
+          <li>REACT</li>
+        </ul>
+      </div>
+      <div class="col-3">
+        DEV TOOLS
+        <ul>
+          <li>GIT</li>
+          <li>NPM</li>
+          <li>POSTMAN</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <address id="contact">
-    <div class="row">
-      <div class="col-12 col-md-8">
-        <form action="" method="get" class="contact-form">
-          <div class="form-intro-text">
-            INTERESTED IN DISCUSSING AN IDEA, WORKING TOGETHER OR JUST CHATTING
-            TO SEE IF WE'RE A MATCH?
-            <span class="say-hello">SAY HELLO!</span>
-          </div>
+  <address id="contact" class="container-lg">
+    <div class="row form-intro-text">
+      <div class="col-12 col-md-6">
+        <div class="form-intro-text">
+          INTERESTED IN DISCUSSING AN IDEA, WORKING TOGETHER OR JUST CHATTING TO
+          SEE IF WE'RE A MATCH?
+        </div>
+        <span class="say-hello">SAY HELLO!</span>
+      </div>
+      <div class="col-12 col-md-6">
+        <form action="submit" method="get" class="contact-form">
           <label for="name"></label>
           <input
             type="text"
@@ -217,25 +240,18 @@
           <button type="submit" value="SEND" class="send-btn">SEND</button>
         </form>
       </div>
-      <div class="col-12 col-md-4">
-        <img
-          src=""
-          alt="OlgaKassian Bitmoji Drinking Coffee"
-          class="bitmoji-coffee"
-        />
-      </div>
     </div>
   </address>
 </main>
 
 <footer class="container">
   <div class="row footer-sections">
-    <div class="col-12 col-md-2 footer-column">
+    <div class="col-12 col-md-3 footer-column">
       <div class="row footer-section-title">CONTACTS</div>
       <div class="row footer-content">+351 93 215 5400</div>
       <div class="row footer-content">olgakassian@gmail.com</div>
     </div>
-    <div class="col-12 col-md-2 footer-column">
+    <div class="col-12 col-md-3 footer-column">
       <div class="row footer-section-title">PROJECTS</div>
       <div class="row footer-content">
         <a href="https://wonther.com/" target="_blank">Wonther</a>
@@ -245,7 +261,7 @@
       </div>
       <div class="row footer-content">Mycelium</div>
     </div>
-    <div class="col-12 col-md-2 footer-column">
+    <div class="col-12 col-md-3 footer-column">
       <div class="row footer-section-title">MEDIA MENTIONS</div>
       <div class="row footer-content">
         <a
