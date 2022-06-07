@@ -95,12 +95,97 @@ body {
   margin: 0;
   overflow: auto;
   padding: 0;
+
+  h4 {
+    font-weight: 200;
+    font-size: 14px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent
+      url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation 0.2s infinite;
+    opacity: 0.9;
+    visibility: visible;
+    z-index: -1;
+  }
+
+  @keyframes bg-animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-5%, -5%);
+    }
+    20% {
+      transform: translate(-10%, 5%);
+    }
+    30% {
+      transform: translate(5%, -10%);
+    }
+    40% {
+      transform: translate(-5%, 15%);
+    }
+    50% {
+      transform: translate(-10%, 5%);
+    }
+    60% {
+      transform: translate(15%, 0);
+    }
+    70% {
+      transform: translate(0, 10%);
+    }
+    80% {
+      transform: translate(-15%, 0);
+    }
+    90% {
+      transform: translate(10%, 5%);
+    }
+    100% {
+      transform: translate(5%, 0);
+    }
+  }
 }
 
-nav.navbar {
-  position: relative;
-  padding: 0;
-  height: 10vh;
+nav {
+  .navbar {
+    position: relative;
+    padding: 0;
+    height: 10vh;
+  }
+  .nav-link {
+    color: white;
+    font-size: 13px;
+    // font-weight: 300;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #f4f4f4;
+    text-decoration-thickness: 0.8px;
+  }
+
+  .nav-link:hover {
+    color: white;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url(../assets/Nav_Collapsed_Icon-01.png);
+    width: 50px;
+  }
 }
 
 header {
@@ -151,34 +236,231 @@ header {
     justify-content: right;
     padding-top: 10px;
   }
-}
+  /*Scrolling Animation CSS Start */
 
-h4 {
-  font-weight: 200;
-  font-size: 14px;
-}
-
-blockquote {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  #background-video {
-    position: relative;
-    width: 100%;
-    // left: 50%;
-    // width: 100vw;
-    // margin-top: 20px;
-    // margin-left: -50vw;
-    z-index: -1;
+  .scrolling-animation-container {
+    overflow: hidden;
+    height: 40px;
+    margin-top: 15px;
   }
 
-  .quote {
+  .scrolling-animation-container::before {
+    left: 0;
+  }
+
+  .scrolling-animation-container:after {
     position: absolute;
-    color: #f4f4f4;
-    font-size: 45px;
-    font-style: italic;
-    letter-spacing: 2px;
-    -webkit-text-stroke: 4px;
+    right: 0;
+  }
+
+  .scrolling-animation-container:after,
+  .scrolling-animation-container:before {
+    position: absolute;
+    top: 0;
+    color: #16a085;
+    line-height: 40px;
+    animation-name: opacity;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .content-animation-list {
+    margin-top: 0;
+    padding-left: 110px;
+    text-align: left;
+    list-style: none;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    animation-name: change;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  .content-animation-list-item {
+    line-height: 50px;
+    margin: 0;
+  }
+
+  @keyframes opacity {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes change {
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    83.3%,
+    95.96% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // /*Scrolling Animation CSS End */
+}
+
+main {
+  .my-story-wrapper {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    .my-story-text {
+      font-size: 2.2rem;
+      font-weight: 200;
+      text-align: left;
+    }
+    .my-story-gif {
+      font-weight: 500;
+    }
+  }
+
+  .interests-wrapper {
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    .interests-content {
+      display: flex;
+      margin: 40px 0px 40px 90px;
+    }
+
+    .interest-individual-section {
+      padding: 0px 60px 0px 60px;
+    }
+
+    .interests-upper-definition {
+      font-weight: 100;
+      font-style: italic;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    .interestes-main-topic {
+      font-weight: bolder;
+      font-size: 25px;
+      padding: 20px 10px 0px 0px;
+    }
+
+    .interests-description {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 100;
+      text-align: left;
+    }
+  }
+
+  .my-projects-wrapper {
+    margin-bottom: 100px;
+    position: relative;
+    .wonther-about {
+      padding-top: 30px;
+      .wonther-title {
+        font-size: 20px;
+        padding: 0px 0px 5px 0px;
+        -webkit-text-stroke: 1px;
+      }
+      .wonther-description {
+        font-size: 12px;
+        font-weight: 100;
+        text-align: justify;
+      }
+      #wonther-video {
+        max-width: 100%;
+      }
+    }
+  }
+
+  blockquote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #background-video {
+      position: relative;
+      width: 100%;
+      // left: 50%;
+      // width: 100vw;
+      // margin-top: 20px;
+      // margin-left: -50vw;
+      z-index: -1;
+    }
+
+    .quote {
+      position: absolute;
+      color: #f4f4f4;
+      font-size: 45px;
+      font-style: italic;
+      letter-spacing: 2px;
+      -webkit-text-stroke: 4px;
+    }
+  }
+
+  .dev-skills-wrapper {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    position: relative;
+
+    .dev-skills-intro {
+      margin-top: 25px;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+
+    ul.list-services {
+      font-size: 15px;
+      font-weight: 100;
+      padding: 0;
+      margin: 25px 0px 0px 0px;
+      line-height: 20px;
+
+      li {
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .dev-skills-block {
+      margin-top: 25px;
+    }
+
+    .dev-skills-grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      max-width: 90%;
+      margin-bottom: 8px;
+    }
+
+    .skill-svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      opacity: 0.5;
+      height: 95px;
+      width: 95px;
+      margin-right: 8px;
+    }
+
+    .skill-svg:hover {
+      opacity: 1;
+    }
+
+    svg {
+      fill: #f4f4f4;
+      width: 30px;
+    }
   }
 }
 
@@ -269,262 +551,5 @@ footer {
     fill: white;
     padding: 0px 8px 0px 8px;
     width: 40px;
-  }
-}
-
-.nav-link {
-  color: white;
-  font-size: 13px;
-  // font-weight: 300;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-  text-decoration-color: #f4f4f4;
-  text-decoration-thickness: 0.8px;
-}
-
-.nav-link:hover {
-  color: white;
-}
-
-.navbar-toggler-icon {
-  background-image: url(../assets/Nav_Collapsed_Icon-01.png);
-  width: 50px;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.my-story-wrapper,
-.interests-wrapper {
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-
-.my-story-wrapper {
-  .my-story-text {
-    font-size: 2.2rem;
-    font-weight: 200;
-    text-align: left;
-  }
-
-  .my-story-gif {
-    font-weight: 500;
-  }
-}
-.interests-wrapper {
-  margin-top: 90px;
-  margin-bottom: 90px;
-
-  .interests-content {
-    display: flex;
-    margin: 40px 0px 40px 90px;
-  }
-
-  .interest-individual-section {
-    padding: 0px 60px 0px 60px;
-  }
-
-  .interests-upper-definition {
-    font-weight: 100;
-    font-style: italic;
-    font-size: 12px;
-    line-height: 15px;
-  }
-
-  .interestes-main-topic {
-    font-weight: bolder;
-    font-size: 25px;
-    padding: 20px 10px 0px 0px;
-  }
-
-  .interests-description {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 100;
-    text-align: left;
-  }
-}
-
-.my-projects-wrapper {
-  margin-bottom: 100px;
-  position: relative;
-  .wonther-about {
-    padding-top: 30px;
-    .wonther-title {
-      font-size: 20px;
-      padding: 0px 0px 5px 0px;
-      -webkit-text-stroke: 1px;
-    }
-    .wonther-description {
-      font-size: 12px;
-      font-weight: 100;
-      text-align: justify;
-    }
-    #wonther-video {
-      max-width: 100%;
-    }
-  }
-}
-
-.dev-skills-wrapper {
-  margin-top: 100px;
-  margin-bottom: 50px;
-  position: relative;
-
-  .dev-skills-intro {
-    margin-top: 25px;
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 30px;
-  }
-
-  ul.list-services {
-    font-size: 15px;
-    font-weight: 100;
-    padding: 0;
-    margin: 25px 0px 0px 0px;
-    line-height: 20px;
-
-    li {
-      text-decoration: none;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-  }
-  .dev-skills-list,
-  .dev-tools-list {
-    margin-top: 25px;
-  }
-}
-
-/*Scrolling Animation CSS Start */
-
-.scrolling-animation-container {
-  overflow: hidden;
-  height: 40px;
-  margin-top: 15px;
-}
-
-.scrolling-animation-container::before {
-  left: 0;
-}
-
-.scrolling-animation-container:after {
-  position: absolute;
-  right: 0;
-}
-
-.scrolling-animation-container:after,
-.scrolling-animation-container:before {
-  position: absolute;
-  top: 0;
-  color: #16a085;
-  line-height: 40px;
-  animation-name: opacity;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-.content-animation-list {
-  margin-top: 0;
-  padding-left: 110px;
-  text-align: left;
-  list-style: none;
-  padding-left: 0px;
-  padding-bottom: 10px;
-  animation-name: change;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-.content-animation-list-item {
-  line-height: 50px;
-  margin: 0;
-}
-
-@keyframes opacity {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-@keyframes change {
-  0%,
-  12.66%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  49.98%,
-  62.64% {
-    transform: translate3d(0, -50%, 0);
-  }
-
-  83.3%,
-  95.96% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-// /*Scrolling Animation CSS End */
-
-.bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200vh;
-  background: transparent
-    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
-  background-repeat: repeat;
-  animation: bg-animation 0.2s infinite;
-  opacity: 0.9;
-  visibility: visible;
-  z-index: -1;
-}
-
-@keyframes bg-animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-5%, -5%);
-  }
-  20% {
-    transform: translate(-10%, 5%);
-  }
-  30% {
-    transform: translate(5%, -10%);
-  }
-  40% {
-    transform: translate(-5%, 15%);
-  }
-  50% {
-    transform: translate(-10%, 5%);
-  }
-  60% {
-    transform: translate(15%, 0);
-  }
-  70% {
-    transform: translate(0, 10%);
-  }
-  80% {
-    transform: translate(-15%, 0);
-  }
-  90% {
-    transform: translate(10%, 5%);
-  }
-  100% {
-    transform: translate(5%, 0);
   }
 }
