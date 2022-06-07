@@ -27,6 +27,17 @@
     }
   }
 
+  address {
+    form {
+      .name-input,
+      .email-input,
+      .mobile-input,
+      .message-input {
+        width: 100%;
+      }
+    }
+  }
+
   footer {
     div.form-intro-text {
       font-size: 12px !important;
@@ -451,10 +462,10 @@ main {
       height: 95px;
       width: 95px;
       margin-right: 8px;
-    }
 
-    .skill-svg:hover {
-      opacity: 1;
+      &:hover {
+        opacity: 1;
+      }
     }
 
     svg {
@@ -468,7 +479,10 @@ address {
   border-top: solid white 0.3px;
   padding: 30px 0px 30px 0px;
   form {
-    padding: 0px 0px 50px 0px;
+    padding: 0px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 
   .form-intro-text {
@@ -478,31 +492,49 @@ address {
     line-height: 30px;
   }
 
+  .form-inputs {
+    display: flex;
+    justify-content: center;
+    height: min-content;
+    margin-top: 10px;
+  }
+
   .name-input,
   .email-input,
+  .mobile-input,
   .message-input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #f4f4f4;
+    color: #f4f4f4;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 12px;
-    padding: 5px 150px 5px 10px;
-    border-radius: 50px;
+    outline: none !important;
+    width: 500px;
+    padding: 5px 15px 5px 0px;
   }
 
   .message-input {
-    padding: 5px 150px 50px 10px;
+    padding: 5px 150px 50px 0px;
   }
 
   .send-btn {
-    align-items: flex-end;
-    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid #f4f4f4;
+    color: #f4f4f4;
     font-size: 12px;
-    font-weight: bolder;
+    font-weight: lighter;
     margin-top: 10px;
-    padding: 5px 20px 5px 20px;
-  }
+    width: 100px;
+    padding: 3px 25px 3px 25px;
 
-  .send-btn:hover {
-    color: #16a085;
+    &:hover {
+      background-color: #f4f4f4;
+      border: 1px solid #252422;
+      color: #252422;
+      font-weight: 600;
+    }
   }
 }
 
