@@ -476,8 +476,9 @@ main {
 }
 
 address {
-  border-top: solid white 0.3px;
+  // border-top: solid white 0.3px;
   padding: 30px 0px 30px 0px;
+
   form {
     padding: 0px 0px 30px 0px;
     display: flex;
@@ -494,9 +495,8 @@ address {
 
   .form-inputs {
     display: flex;
-    justify-content: center;
-    height: min-content;
-    margin-top: 10px;
+    margin-top: 25px;
+    justify-content: space-around;
   }
 
   .name-input,
@@ -507,8 +507,6 @@ address {
     border: 0;
     border-bottom: 2px solid #f4f4f4;
     color: #f4f4f4;
-    margin-top: 5px;
-    margin-bottom: 5px;
     font-size: 12px;
     outline: none !important;
     width: 500px;
