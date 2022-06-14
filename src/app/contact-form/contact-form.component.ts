@@ -41,9 +41,9 @@ export class ContactFormComponent implements OnInit {
     //   }
     // }
     Email.send({
-      SecureToken: '6d981860-17e9-483f-b8dc-ff2813e9793b',
+      SecureToken: 'ee0cc95c-9c41-43ad-91f4-bf75c73c3960',
       To: 'olgakassian@gmail.com',
-      From: 'olga.kassian@olgakassian.com',
+      From: 'olgakassian97@gmail.com',
       Subject: 'This is the subject',
       Body: 'And this is the body',
     }).then((message: any) => alert(message));
