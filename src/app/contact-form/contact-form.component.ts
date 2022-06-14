@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
+declare let Email: any;
 
 @Component({
   selector: 'contact-form',
@@ -40,5 +40,12 @@ export class ContactFormComponent implements OnInit {
     //       // });
     //   }
     // }
+    Email.send({
+      SecureToken: 'b92f3308-7d67-416d-8d22-caa8598b7096',
+      To: 'olgakassian@gmail.com',
+      From: 'olga.kassian@olgakassian.com',
+      Subject: 'This is the subject',
+      Body: 'And this is the body',
+    }).then((message: any) => alert(message));
   }
 }
