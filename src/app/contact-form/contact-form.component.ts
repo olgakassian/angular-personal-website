@@ -43,7 +43,7 @@ export class ContactFormComponent implements OnInit {
     Email.send({
       SecureToken: 'ee0cc95c-9c41-43ad-91f4-bf75c73c3960',
       To: 'olgakassian@gmail.com',
-      From: 'olgakassian97@gmail.com',
+      From: 'kikoect@gmail.com',
       Subject: 'This is the subject',
       Body: 'And this is the body',
     }).then((message: any) => alert(message));
