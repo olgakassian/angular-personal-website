@@ -4,8 +4,14 @@
   .container-lg {
     padding: 0px 30px 0px 30px !important;
   }
+
   .container-fluid {
     flex-direction: row-reverse;
+    padding: 0;
+  }
+
+  .navbar-nav {
+    padding-left: 15px !important;
   }
 
   .header {
@@ -27,22 +33,35 @@
     h3 {
       font-size: 20px;
       margin-top: 15px;
+      margin-bottom: 30px !important;
     }
   }
 
-  address {
-    form {
-      .name-input,
-      .email-input,
-      .mobile-input,
-      .message-input {
-        width: 100% !important;
-        justify-content: left;
+  .my-projects-wrapper,
+  .dev-skills-wrapper {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
 
-        .form-inputs {
-          padding: 0 !important;
-        }
-      }
+  address {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    .name-input,
+    .email-input,
+    .mobile-input,
+    .message-input {
+      width: 100% !important;
+      justify-content: left;
+    }
+    .form-inputs {
+      justify-content: flex-start !important;
+    }
+  }
+
+  section.media-wrapper {
+    .media-scroll-section {
+      display: flex;
+      justify-content: space-around;
     }
   }
 
@@ -76,7 +95,7 @@
 @media (max-width: 1033px) {
   section.my-story-wrapper {
     text-align: left;
-    margin-top: 0;
+    padding-top: 0;
     p.my-story-text {
       font-size: 1.2rem;
       padding-top: 20px;
@@ -85,18 +104,14 @@
   }
 
   .interests-wrapper {
-    margin-top: 0px;
+    padding-top: 0px;
 
     .row.interests-content {
-      margin: 10px 0px 40px 0px;
+      padding: 10px 0px 40px 0px;
     }
 
     .col-12.interest-individual-section {
       padding: 30px 20px 0px 20px;
-    }
-
-    .row.interests-upper-definition {
-      display: none;
     }
 
     .row.interestes-main-topic {
@@ -195,9 +210,9 @@ nav {
     height: 10vh;
   }
   .nav-link {
-    color: white;
+    color: #f4f4f4;
     font-size: 13px;
-    // font-weight: 300;
+    transition-timing-function: steps(4, end);
   }
 
   .nav-link:hover {
@@ -353,15 +368,16 @@ main {
   }
 
   .interests-wrapper {
-    margin-top: 90px;
-    margin-bottom: 90px;
+    padding-top: 90px;
+    display: flex;
 
     .interests-content {
-      display: flex;
-      margin: 40px 0px 40px 90px;
+      justify-content: flex-end;
+      margin: 40px 0px 40px 0px;
     }
 
     .interest-individual-section {
+      justify-content: left;
       padding: 0px 60px 0px 60px;
     }
 
@@ -373,6 +389,7 @@ main {
     }
 
     .interestes-main-topic {
+      white-space: nowrap;
       font-weight: bolder;
       font-size: 25px;
       padding: 20px 10px 0px 0px;
@@ -387,7 +404,8 @@ main {
   }
 
   .my-projects-wrapper {
-    margin-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 100px;
     position: relative;
     .wonther-about {
       padding-top: 30px;
@@ -433,8 +451,7 @@ main {
   }
 
   .dev-skills-wrapper {
-    margin-top: 100px;
-    margin-bottom: 50px;
+    padding-top: 100px;
     position: relative;
 
     .dev-skills-intro {
@@ -493,8 +510,7 @@ main {
 }
 
 address {
-  // border-top: solid white 0.3px;
-  padding: 30px 0px 30px 0px;
+  padding: 80px 0px 30px 0px;
 
   form {
     padding: 0px 0px 30px 0px;
@@ -548,6 +564,7 @@ address {
     margin-top: 10px;
     width: 100px;
     padding: 3px 25px 3px 25px;
+    transition-timing-function: steps(4, end);
 
     &:hover {
       background-color: #f4f4f4;
