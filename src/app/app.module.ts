@@ -7,12 +7,14 @@ import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [AppComponent, ContactFormComponent],
   imports: [
     ReactiveFormsModule,
     BrowserModule,
+    SwiperModule,
 
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

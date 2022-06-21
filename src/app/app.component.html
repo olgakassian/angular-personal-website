@@ -313,7 +313,29 @@
       <h4>MEDIA</h4>
     </div>
     <div class="row media-scroll-section">
-      <div class="col-6 col-sm-3 news-block">
+      <swiper [slidesPerView]="3" [spaceBetween]="50">
+        <ng-container *ngFor="let post of posts$ | async">
+          <ng-template swiperSlide>
+            <div class="news-block">
+              <a
+                href="{{ post.featured_image_alt }}
+        "
+                class="media-link"
+                target="_blank"
+              >
+                <img [src]="post.featured_image" alt="" class="media-img" />
+              </a>
+              <h5 class="news-title">{{ post.title }}</h5>
+              <p class="news-description">{{ post.summary }}</p>
+            </div>
+          </ng-template>
+        </ng-container>
+        <!-- <ng-template swiperSlide>Slide 1</ng-template>
+      <ng-template swiperSlide>Slide 2</ng-template>
+      <ng-template swiperSlide>Slide 3</ng-template> -->
+      </swiper>
+
+      <!-- <div class="col-6 col-sm-3 news-block">
         <a
           href="
         "
@@ -348,7 +370,7 @@
           Ethical and sustainable jewelry that celebrate a unique life.
         </p>
       </div>
-
+      
       <div class="col-6 col-sm-3 news-block">
         <a
           href="
@@ -385,7 +407,7 @@
           Portuguese brand takes the silver that no one wants and gives it a new
           life.
         </p>
-      </div>
+      </div> -->
     </div>
   </section>
 </main>
