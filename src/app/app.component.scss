@@ -558,6 +558,39 @@ address {
   }
 }
 
+section.media-wrapper {
+  .media-scroll-section {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    .news-block {
+      margin-right: 45px;
+      width: 250px;
+
+      .media-link {
+        text-decoration: none;
+        color: #f4f4f4;
+      }
+
+      .media-img {
+        width: 250px;
+        height: 150px;
+      }
+
+      .news-title {
+        font-size: 15px;
+        padding: 15px 0px 0px 0px;
+        margin-bottom: 3px;
+        text-transform: uppercase;
+      }
+
+      .news-description {
+        font-size: 12px;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
 footer {
   border-top: solid white 0.3px;
   margin-bottom: 20px;

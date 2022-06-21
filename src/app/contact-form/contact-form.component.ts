@@ -16,36 +16,23 @@ export class ContactFormComponent implements OnInit {
     message: [''],
   });
 
-  confirmationUrl: SafeResourceUrl;
+  isEmailSent = false;
 
-  constructor(
-    private fb: FormBuilder,
-    private httpClient: HttpClient,
-    private sanitizer: DomSanitizer
-  ) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit() {}
 
   submitForm() {
-    //   if (this.contactForm.valid) {
-    //     this.httpClient
-    //       .post(
-    //         'https://mailthis.to/olgakassian@gmail.com',
-    //         this.contactForm.value,
-    //         { responseType: 'text' }
-    //       )
-    //       // .subscribe((data) => {
-    //       //   // console.log(data);
-    //       //   location.href = 'https://mailthis.to/confirm';
-    //       // });
-    //   }
-    // }
     Email.send({
       SecureToken: 'ee0cc95c-9c41-43ad-91f4-bf75c73c3960',
       To: 'olgakassian@gmail.com',
-      From: 'kikoect@gmail.com',
-      Subject: 'This is the subject',
-      Body: 'And this is the body',
-    }).then((message: any) => alert(message));
+      From: 'olgakassian97@gmail.com',
+      Subject: 'New Message From OK Website',
+      Body: `${this.contactForm.value.name}, ${this.contactForm.value.email}, ${this.contactForm.value.message} `,
+    }).then((message: any) => {
+      if (message === 'OK') {
+        this.isEmailSent = true;
+      }
+    });
   }
 }

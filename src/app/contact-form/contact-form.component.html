@@ -1,27 +1,32 @@
-<form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form">
-  <label for="name"></label>
-  <input
-    type="text"
-    formControlName="name"
-    id="name"
-    placeholder="Your Name"
-    class="name-input"
-    required
-  />
-  <!-- <div class="row form-email-mobile-section"> -->
-  <!-- <div class="col form-email-mobile-section"> -->
-  <label for="email"></label>
-  <input
-    type="email"
-    formControlName="email"
-    id="email"
-    placeholder="Your Email "
-    class="email-input"
-    required
-  />
-  <!-- </div> -->
-  <!-- <div class="col form-email-mobile-section"> -->
-  <!-- <label for="mobile"></label>
+<ng-container *ngIf="!isEmailSent; else emailSent">
+  <form
+    [formGroup]="contactForm"
+    (ngSubmit)="submitForm()"
+    class="contact-form"
+  >
+    <label for="name"></label>
+    <input
+      type="text"
+      formControlName="name"
+      id="name"
+      placeholder="Your Name"
+      class="name-input"
+      required
+    />
+    <!-- <div class="row form-email-mobile-section"> -->
+    <!-- <div class="col form-email-mobile-section"> -->
+    <label for="email"></label>
+    <input
+      type="email"
+      formControlName="email"
+      id="email"
+      placeholder="Your Email "
+      class="email-input"
+      required
+    />
+    <!-- </div> -->
+    <!-- <div class="col form-email-mobile-section"> -->
+    <!-- <label for="mobile"></label>
     <input
       type="mobile"
       name="mobile"
@@ -30,17 +35,19 @@
       class="mobile-input"
       required
     /> -->
-  <!-- </div>
+    <!-- </div>
     </div> -->
-  <label for="message"></label>
-  <textarea
-    type="text"
-    formControlName="message"
-    id="message"
-    placeholder="Your Message"
-    class="message-input"
-    required
-  ></textarea>
-  <br />
-  <button type="submit" value="SEND" class="send-btn">SEND</button>
-</form>
+    <label for="message"></label>
+    <textarea
+      type="text"
+      formControlName="message"
+      id="message"
+      placeholder="Your Message"
+      class="message-input"
+      required
+    ></textarea>
+    <br />
+    <button type="submit" value="SEND" class="send-btn">SEND</button>
+  </form>
+</ng-container>
+<ng-template #emailSent> OBRIGADOOOOOOO </ng-template>
