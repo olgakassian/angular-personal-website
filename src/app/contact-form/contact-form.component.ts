@@ -29,7 +29,7 @@ export class ContactFormComponent implements OnInit {
       To: 'olgakassian@gmail.com',
       From: 'olgakassian97@gmail.com',
       Subject: 'New Message From OK Website',
-      Body: `${this.contactForm.value.name}, ${this.contactForm.value.email}, ${this.contactForm.value.message} `,
+      Body: `Name: ${this.contactForm.value.name} / E-mail: ${this.contactForm.value.email} / Message: ${this.contactForm.value.message} `,
     }).then((message: any) => {
       if (message === 'OK') {
         this.isEmailSent = true;
