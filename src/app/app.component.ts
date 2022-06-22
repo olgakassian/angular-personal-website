@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NewsService } from './news.service';
-import SwiperCore from 'swiper';
+import SwiperCore, { SwiperOptions } from 'swiper';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +12,24 @@ export class AppComponent implements OnInit {
   date = new Date();
   posts$: any;
 
-  constructor(private newsService: NewsService) {}
+  swiperConfig: SwiperOptions;
+
+  constructor(private newsService: NewsService) {
+    this.swiperConfig = {
+      spaceBetween: 30,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    };
+  }
 
   ngOnInit() {
     this.posts$ = this.newsService.getPosts$();

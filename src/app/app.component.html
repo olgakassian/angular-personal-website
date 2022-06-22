@@ -313,7 +313,7 @@
       <h4>MEDIA</h4>
     </div>
     <div class="row media-scroll-section">
-      <swiper [slidesPerView]="3" [spaceBetween]="50">
+      <swiper [config]="swiperConfig">
         <ng-container *ngFor="let post of posts$ | async">
           <ng-template swiperSlide>
             <div class="news-block">

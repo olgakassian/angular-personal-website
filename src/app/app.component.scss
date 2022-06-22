@@ -69,10 +69,6 @@
       overflow: hidden;
       .swiper-wrapper {
         display: flex;
-
-        .swiper-slide {
-          width: 100% !important;
-        }
       }
     }
   }
@@ -584,6 +580,11 @@ address {
       color: #252422;
       font-weight: 600;
     }
+  }
+  .form-sent-message {
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 20px;
   }
 }
 
