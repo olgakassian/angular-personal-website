@@ -323,7 +323,12 @@
                 class="media-link"
                 target="_blank"
               >
-                <img [src]="post.featured_image" alt="" class="media-img" />
+                <img
+                  [src]="post.featured_image"
+                  alt=""
+                  class="media-img"
+                  loading="lazy"
+                />
               </a>
               <h5 class="news-title">{{ post.title }}</h5>
               <p class="news-description">{{ post.summary }}</p>
