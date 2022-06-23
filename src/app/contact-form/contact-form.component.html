@@ -23,16 +23,7 @@
       placeholder="Your Email "
       class="email-input"
     />
-    <span
-      *ngIf="!isFormValid && contactForm.controls['email'].errors?.['email']"
-    >
-      OH BURRO escreve um email valido
-    </span>
-    <span
-      *ngIf="!isFormValid && contactForm.controls['email'].errors?.['required']"
-    >
-      Queres que adivinhe quem es tu OH BURRO DO CRL
-    </span>
+
     <!-- </div> -->
     <!-- <div class="col form-email-mobile-section"> -->
     <!-- <label for="mobile"></label>
@@ -55,7 +46,31 @@
       class="message-input"
       required
     ></textarea>
-    <br />
+
+    <span
+      class="error-message"
+      *ngIf="!isFormValid && contactForm.controls['email'].errors?.['email']"
+    >
+      *Please enter a valid email address
+    </span>
+    <span
+      class="error-message"
+      *ngIf="!isFormValid && contactForm.controls['email'].errors?.['required']"
+    >
+      *Please fill in all the fields
+    </span>
+    <span
+      class="error-message"
+      *ngIf="!isFormValid && contactForm.controls['name'].errors?.['required']"
+    >
+      *Please fill in all the fields
+    </span>
+    <span
+      class="error-message"
+      *ngIf="!isFormValid && contactForm.controls['message'].errors?.['required']"
+    >
+      *Please fill in all the fields
+    </span>
     <button type="submit" value="SEND" class="send-btn">SEND</button>
   </form>
 </ng-container>

@@ -586,6 +586,12 @@ address {
     font-weight: lighter;
     line-height: 20px;
   }
+  .error-message {
+    color: red;
+    font-size: 10px;
+    text-align: left;
+    justify-content: left;
+  }
 }
 
 section.media-wrapper {
