@@ -55,22 +55,11 @@
     </span>
     <span
       class="error-message"
-      *ngIf="!isFormValid && contactForm.controls['email'].errors?.['required']"
+      *ngIf="!isFormValid && (contactForm.controls['email'].errors?.['required'] || contactForm.controls['name'].errors?.['required'] || contactForm.controls['message'].errors?.['required'])"
     >
       *Please fill in all the fields
     </span>
-    <span
-      class="error-message"
-      *ngIf="!isFormValid && contactForm.controls['name'].errors?.['required']"
-    >
-      *Please fill in all the fields
-    </span>
-    <span
-      class="error-message"
-      *ngIf="!isFormValid && contactForm.controls['message'].errors?.['required']"
-    >
-      *Please fill in all the fields
-    </span>
+
     <button type="submit" value="SEND" class="send-btn">SEND</button>
   </form>
 </ng-container>
