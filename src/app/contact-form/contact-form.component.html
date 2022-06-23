@@ -22,8 +22,17 @@
       id="email"
       placeholder="Your Email "
       class="email-input"
-      required
     />
+    <span
+      *ngIf="!isFormValid && contactForm.controls['email'].errors?.['email']"
+    >
+      OH BURRO escreve um email valido
+    </span>
+    <span
+      *ngIf="!isFormValid && contactForm.controls['email'].errors?.['required']"
+    >
+      Queres que adivinhe quem es tu OH BURRO DO CRL
+    </span>
     <!-- </div> -->
     <!-- <div class="col form-email-mobile-section"> -->
     <!-- <label for="mobile"></label>

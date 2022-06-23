@@ -13,27 +13,37 @@ declare let Email: any;
 export class ContactFormComponent implements OnInit {
   contactForm: FormGroup = this.fb.group({
     name: [''],
-    email: ['', Validators.required],
+    email: ['', [Validators.email, Validators.required]],
     message: [''],
   });
 
   isEmailSent = false;
+  isFormValid = true;
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {}
 
   submitForm() {
-    Email.send({
-      SecureToken: 'ee0cc95c-9c41-43ad-91f4-bf75c73c3960',
-      To: 'olgakassian@gmail.com',
-      From: 'olgakassian97@gmail.com',
-      Subject: 'New Message From OK Website',
-      Body: `Name: ${this.contactForm.value.name} / E-mail: ${this.contactForm.value.email} / Message: ${this.contactForm.value.message} `,
-    }).then((message: any) => {
-      if (message === 'OK') {
-        this.isEmailSent = true;
-      }
-    });
+    if (this.contactForm.valid) {
+      Email.send({
+        SecureToken: 'ee0cc95c-9c41-43ad-91f4-bf75c73c3960',
+        To: 'olgakassian@gmail.com',
+        From: 'olgakassian97@gmail.com',
+        Subject: 'New Message From OK Website',
+        Body: `Name: ${this.contactForm.value.name} / E-mail: ${this.contactForm.value.email} / Message: ${this.contactForm.value.message} `,
+      }).then((message: any) => {
+        if (message === 'OK') {
+          this.isEmailSent = true;
+        }
+      });
+      this.isFormValid = true;
+    } else {
+      this.isFormValid = false;
+    }
+
+    this.contactForm.updateValueAndValidity();
+
+    console.log(this.contactForm);
   }
 }
