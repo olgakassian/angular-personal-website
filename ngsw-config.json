@@ -11,7 +11,13 @@
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/assets/**"
+        ],
+        "urls": [
+          "https://cdn.shopify.com/videos/c/o/v/9b4ee52f8a0c43289c42ba63e0c5b561.mp4",
+          "https://cdn.shopify.com/s/files/1/0047/1616/7214/files/AdobeStock_80426866_1.mov?v=1654177182",
+          "https://cdn.shopify.com/s/files/1/0047/1616/7214/files/Blockquote_Techno_Background_Trim_1_1.mp4?v=1654180677"
         ]
       }
     },
@@ -21,7 +27,6 @@
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/**",
           "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
       }

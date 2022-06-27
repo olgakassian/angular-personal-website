@@ -18,7 +18,6 @@ export class NewsService {
   getPosts$() {
     return from(
       this.butterService.post.list().then((posts) => {
-        console.log(posts.data.data);
         return posts.data.data;
       })
     );
