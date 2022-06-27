@@ -12,7 +12,8 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js",
-          "/assets/**"
+          "/assets/**",
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2"
         ],
         "urls": [
           "https://cdn.shopify.com/videos/c/o/v/9b4ee52f8a0c43289c42ba63e0c5b561.mp4",
@@ -25,11 +26,7 @@
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
-      "resources": {
-        "files": [
-          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
-        ]
-      }
+      "resources": {}
     }
   ]
 }
